@@ -1,0 +1,153 @@
+/* 
+<link rel="stylesheet" media="screen and (min-width: 900px)" href="widescreen.css">
+<link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css"> 
+*/
+
+@import url('https://fonts.cdnfonts.com/css/druk-wide-trial');
+body {
+    font-family: 'Druk Wide Trial', sans-serif;
+    background: black;
+    color: white;
+}
+@media screen and (min-width: 800px){
+header {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    color: white;
+}
+ul {
+    display: flex;
+}
+li {
+    list-style-type: none;
+    text-decoration: none;
+    margin-right: 20px;
+    color: white;}
+li:hover {
+    color: red;
+    transition: 0.2s;
+}
+a {
+    text-decoration: none;
+}
+.greatings {
+    font-size: 50px;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    line-height: 80px;
+    cursor: default;
+}
+.H:hover{color:red;transition: 0.2s;}
+.e:hover{color:red;transition: 0.2s;}
+.l:hover{color:red;transition: 0.2s;}
+.l2:hover{color:red;transition: 0.2s;}
+.o:hover{color:red;transition: 0.2s;}
+.comma:hover{color:red;transition: 0.2s;}
+.I:hover{color:red;transition: 0.2s;}
+.ap:hover{color:red;transition: 0.2s;}
+.m:hover{color:red;transition: 0.2s;}
+.C:hover{color:red;transition: 0.2s;}
+.a:hover{color:red;transition: 0.2s;}
+.i:hover{color:red;transition: 0.2s;}
+.o2:hover{color:red;transition: 0.2s;}
+.comma2:hover{color:red;transition: 0.2s;}
+.W:hover{color:red;transition: 0.2s;}
+.e2:hover{color:red;transition: 0.2s;}
+.b:hover{margin-right:20px;color:red;transition: 0.2s;}
+.d:hover{color:red;transition: 0.2s;}
+.e3:hover{color:red;transition: 0.2s;}
+.s:hover{color:red;transition: 0.2s;}
+.i:hover{color:red;transition: 0.2s;}
+.g:hover{color:red;transition: 0.2s;}
+.n:hover{color:red;transition: 0.2s;}
+.e4:hover{color:red;transition: 0.2s;}
+.r:hover{color:red;transition: 0.2s;}
+.dot:hover{color:red;transition: 0.2s;}
+
+.phrases {
+    display: flex;
+    justify-content: center;
+}
+/* ---------------------------------- */
+.section2 {
+    background: white;
+    color: black;
+    font-size: 30px;
+    text-align: center;
+    margin: 40px 0 0 0;
+    padding: 30px 0 30px 0;
+}
+.projects {
+    cursor: default;
+}
+.section3 {
+    margin-top: 20px;
+}
+.slideSquareBox {
+    background: rgba(255, 0, 0, 0);
+    padding: 30px 0 30px 0;
+    display: grid;
+    justify-content: center;
+}
+.slideSquareText {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+.link1 {
+    color: white;
+    text-decoration: none;
+}
+.animationBox1 {
+    background: #000;
+    width: 1000px;
+    height: 100px;
+    display: grid;
+    justify-content: center;
+}
+.floor {
+    background: linear-gradient(to right, #000,#fff,#fff,#fff,#000);
+    width: 850px;
+    height: 5px;
+    margin-top: -10px;
+    border-radius: 10px;
+}
+.square {
+    width: 35px;
+    height: 35px;
+    margin-top: 32px;
+    margin-left: -40px;
+    border-radius: 12px;
+    border: 7px solid #fff;
+    animation: squareAnimation 8s ease infinite;
+    animation-play-state: running;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+@keyframes squareAnimation {
+    0%{margin-left: -40px;opacity:0;}
+    5%{margin-left: 0px;transform:rotate(90deg);opacity: 0.3;}
+    10%{margin-left: 40px;transform:rotate(180deg);opacity: 0.6;}
+    15%{margin-left: 80px;transform:rotate(270deg);opacity: 1;}
+    20%{margin-left: 120px;transform:rotate(360deg);opacity: 1;}
+    25%{margin-left: 160px;transform:rotate(450deg);opacity: 1;}
+    30%{margin-left: 200px;transform:rotate(540deg);opacity: 1;}
+    35%{margin-left: 240px;transform:rotate(630deg);opacity: 1;}
+    40%{margin-left: 280px;transform:rotate(720deg);opacity: 1;}
+    45%{margin-left: 320px;transform:rotate(810deg);opacity: 1;}
+    50%{margin-left: 360px;transform:rotate(900deg);opacity: 1;}
+    55%{margin-left: 400px;transform:rotate(990deg);opacity: 1;}
+    60%{margin-left: 440px;transform:rotate(1080deg);opacity: 1;}
+    65%{margin-left: 480px;transform:rotate(1170deg);opacity: 1;}
+    70%{margin-left: 520px;transform:rotate(1260deg);opacity: 1;}
+    75%{margin-left: 560px;transform:rotate(1350deg);opacity: 1;}
+    80%{margin-left: 600px;transform:rotate(1440deg);opacity: 1;}
+    85%{margin-left: 640px;transform:rotate(1530deg);opacity: 1;}
+    90%{margin-left: 680px;transform:rotate(1620deg);opacity: 0.6;}
+    95%{margin-left: 720px;transform:rotate(1710deg);opacity: 0.3;}
+    100%{margin-left: 760px;transform:rotate(1800deg);opacity: 0;}
+}
+}

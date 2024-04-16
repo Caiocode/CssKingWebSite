@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Animation</title>
+    <style>
+        body {
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        a {
+            background: rgba(255, 0, 0, 0);
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            margin-top: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: loadingCircle 0.5s linear infinite;
+            transition: 3;
+        }
+        @keyframes loadingCircle {
+            0%{
+                background:linear-gradient(to left top, #000,#000, #fff);
+                
+            }
+            12%{
+                background:linear-gradient(to top,#000,#000, #fff);
+                
+            }
+            28%{
+                background:linear-gradient(to right top,#000, #000, #fff);
+                
+            }
+            40%{
+                background:linear-gradient(to right,#000, #000, #fff);
+                
+            }
+            52%{
+                background:linear-gradient(to right bottom,#000,#000, #fff);
+                
+            }
+            64%{
+                background:linear-gradient(to bottom,#000, #000, #fff);
+                
+            }
+            76%{
+                background:linear-gradient(to left bottom, #000,#000, #fff);
+                
+            }
+            88%{
+                background:linear-gradient(to left,#000, #000, #fff);
+                
+            }
+            100%{
+                background:linear-gradient(to left top, #000, #000, #fff);
+                
+            }
+        }
+        b {
+            background: rgb(0, 0, 0);
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <a><b></b></a>
+</body>
+</html>

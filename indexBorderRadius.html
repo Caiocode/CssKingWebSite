@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Radius Animation</title>
+    <style>
+        body {
+            background: url(fundo-quadriculado-trippy-papel-de-parede-quadriculado-psicodelico-retro-tabuleiro-de-xadrez-ondulado_497399-1472.avif);
+            background-position: center;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+        a {
+            background-color: #ff4747;
+            width: 200px;
+            height: 200px;
+            margin-top: 240px;
+            animation: radius-animation 6s ease-in-out infinite;
+            transition: 1s;
+            border-radius: 50% 50% 50% 50% / 40% 40% 40% 40%;
+            transform: rotate(45deg);
+        }
+        @keyframes radius-animation {
+            0%{
+                border-radius: 0% 0% 0% 0%;transform:rotate(0deg);
+            } 
+            12%{
+                border-radius: 50% 0% 0% 0%;transform:rotate(45deg);
+            } 
+            24%{
+                border-radius: 50% 50% 0% 0%;transform: rotate(90deg);
+            }
+            36%{
+                border-radius: 50% 50% 50% 0%;transform: rotate(135deg);
+            }
+            48%{
+                border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;transform: rotate(180deg);
+            }
+            60%{
+                border-radius: 50% 50% 50% 50% / 25% 25% 25% 25%;transform:rotate(225deg);
+            } 
+            72%{
+                border-radius: 50% 50% 50% 50% / 5% 5% 5% 5%;transform:rotate(270deg);
+            }
+            84%{
+                border-radius: 50% 50% 50% 50% / 0% 0% 0% 0%;transform:rotate(315deg);
+            }
+            100%{border-radius: 0% 0% 0% 0%;transform:rotate(360deg);}
+        }
+    </style>
+</head>
+<body>
+    <a></a><b></b>
+</body>
+</html>
