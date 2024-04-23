@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/druk-wide-trial" rel="stylesheet"> 
+    <title>Contact Me -  King Of CSS</title>
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/druk-wide-trial');
+        body {
+            font-family: 'Druk Wide Trial', sans-serif;
+            font-size: 30px;
+            background: black;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+        @media screen and (min-width: 800px) {
+            li {
+                list-style-type: none;
+            }
+            a {
+                text-decoration: none;
+                color: white;
+            }
+            header {
+                display: flex;
+                justify-content: center;
+                position: fixed;
+                background: #000;
+                top: 0;
+                left: 0;
+                width: 100%;
+                font-size: 20px;
+                color: white;
+            }
+            ul {
+                display: flex;
+            }
+            li {
+                list-style-type: none;
+                text-decoration: none;
+                margin-right: 20px;
+                color: white;
+            }
+            .headerLi:hover {
+                transition: 0.2s;
+                color: red;
+            }
+            .mainUL {
+                display: grid;
+            }
+            .mainLI {
+                margin-top: 30px;
+            }
+            .main {
+                margin-top: 100px;
+                background: rgba(255, 0, 0, 0);
+                width: 500px;            
+                display: grid;
+                line-height: 60px;
+            }
+            .li1, .li3 {
+                background: linear-gradient(to right, black, white, black);
+                color: black;
+                display: flex;
+                justify-content: center;
+                transition: 0.2s;
+            }
+            
+            .li2, .li4 {
+                color: rgb(255, 255, 255);
+                display: flex;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <a href="https://caiocode.github.io/CssKingWebSite/index%20(4).html"><li class="headerLi" style="margin-left:-10px;">Home</li></a>
+            <a href="socialMedia.html"><li class="headerLi">Social Media</li></a>
+            <a href="contactMe.html"><li class="headerLi">Contact Me</li></a>
+        </ul>
+    </header>
+    <div class="main">
+        <ul class="mainUL">
+            <a href="https://www.instagram.com/caiopolo_/?next=%2F" target="_blank"><li class="mainLI li1">Instagram</li></a>
+            <a href="https://github.com/Caiocode" target="_blank"><li class="mainLI li2">GitHub</li></a>
+            <a href="" target="_blank"><li class="mainLI li3">TikTok</li></a>
+            <a href="" target="_blank"><li class="mainLI li4">Youtube</li></a>
+        </ul>
+    </div>
+</body>
+</html>
