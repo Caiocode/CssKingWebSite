@@ -13,6 +13,11 @@ body {
 header {
     display: flex;
     justify-content: center;
+    position: fixed;
+    background: #000;
+    top: 0;
+    left: 0;
+    width: 100%;
     font-size: 20px;
     color: white;
 }
@@ -38,6 +43,7 @@ a {
     text-align: center;
     line-height: 80px;
     cursor: default;
+    padding: 80px 0 0 0;
 }
 .H:hover{color:red;transition: 0.2s;}
 .e:hover{color:red;transition: 0.2s;}
@@ -91,12 +97,16 @@ a {
     display: grid;
     justify-content: center;
 }
-.slideSquareText {
+.text {
     font-size: 30px;
     display: flex;
     justify-content: center;
 }
-.link1 {
+.text:hover {
+    text-shadow: -10px 5px 2px rgba(255, 0, 0, 0.721);
+    transition: 0.2s;
+}
+.link1, .link2 {
     color: white;
     text-decoration: none;
 }
@@ -109,6 +119,7 @@ a {
 }
 .floor {
     background: linear-gradient(to right, #000,#fff,#fff,#fff,#000);
+    opacity: 0.4;
     width: 850px;
     height: 5px;
     margin-top: -10px;
@@ -129,25 +140,364 @@ a {
 }
 @keyframes squareAnimation {
     0%{margin-left: -40px;opacity:0;}
-    5%{margin-left: 0px;transform:rotate(90deg);opacity: 0.3;}
-    10%{margin-left: 40px;transform:rotate(180deg);opacity: 0.6;}
-    15%{margin-left: 80px;transform:rotate(270deg);opacity: 1;}
-    20%{margin-left: 120px;transform:rotate(360deg);opacity: 1;}
-    25%{margin-left: 160px;transform:rotate(450deg);opacity: 1;}
-    30%{margin-left: 200px;transform:rotate(540deg);opacity: 1;}
-    35%{margin-left: 240px;transform:rotate(630deg);opacity: 1;}
-    40%{margin-left: 280px;transform:rotate(720deg);opacity: 1;}
-    45%{margin-left: 320px;transform:rotate(810deg);opacity: 1;}
-    50%{margin-left: 360px;transform:rotate(900deg);opacity: 1;}
-    55%{margin-left: 400px;transform:rotate(990deg);opacity: 1;}
-    60%{margin-left: 440px;transform:rotate(1080deg);opacity: 1;}
-    65%{margin-left: 480px;transform:rotate(1170deg);opacity: 1;}
-    70%{margin-left: 520px;transform:rotate(1260deg);opacity: 1;}
-    75%{margin-left: 560px;transform:rotate(1350deg);opacity: 1;}
-    80%{margin-left: 600px;transform:rotate(1440deg);opacity: 1;}
-    85%{margin-left: 640px;transform:rotate(1530deg);opacity: 1;}
-    90%{margin-left: 680px;transform:rotate(1620deg);opacity: 0.6;}
-    95%{margin-left: 720px;transform:rotate(1710deg);opacity: 0.3;}
+    5%{margin-left: 0px;transform:rotate(90deg);opacity: 0.1;}
+    10%{margin-left: 40px;transform:rotate(180deg);opacity: 0.2;}
+    15%{margin-left: 80px;transform:rotate(270deg);opacity: 0.4;}
+    20%{margin-left: 120px;transform:rotate(360deg);opacity: 0.4;}
+    25%{margin-left: 160px;transform:rotate(450deg);opacity: 0.4;}
+    30%{margin-left: 200px;transform:rotate(540deg);opacity: 0.4;}
+    35%{margin-left: 240px;transform:rotate(630deg);opacity: 0.4;}
+    40%{margin-left: 280px;transform:rotate(720deg);opacity: 0.4;}
+    45%{margin-left: 320px;transform:rotate(810deg);opacity: 0.4;}
+    50%{margin-left: 360px;transform:rotate(900deg);opacity: 0.4;}
+    55%{margin-left: 400px;transform:rotate(990deg);opacity: 0.4;}
+    60%{margin-left: 440px;transform:rotate(1080deg);opacity: 0.4;}
+    65%{margin-left: 480px;transform:rotate(1170deg);opacity: 0.4;}
+    70%{margin-left: 520px;transform:rotate(1260deg);opacity: 0.4;}
+    75%{margin-left: 560px;transform:rotate(1350deg);opacity: 0.45;}
+    80%{margin-left: 600px;transform:rotate(1440deg);opacity: 0.4;}
+    85%{margin-left: 640px;transform:rotate(1530deg);opacity: 0.4;}
+    90%{margin-left: 680px;transform:rotate(1620deg);opacity: 0.3;}
+    95%{margin-left: 720px;transform:rotate(1710deg);opacity: 0.1;}
     100%{margin-left: 760px;transform:rotate(1800deg);opacity: 0;}
+}
+.borderRadiusBox {
+    padding: 60px 0 0 0;
+}
+.animationBox2 {
+    background: rgba(255, 0, 0, 0);
+    width: 100%;
+    height: 150px;
+    margin-top: -90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.borderAnimation {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 10px solid rgba(255, 255, 255, 0.500);
+    animation-duration: 10s;
+    animation-name: borderAnimation;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    animation-play-state: running;
+    animation-range: initial;
+}
+@keyframes borderAnimation {
+    0%{border-radius: 50% 50% 50% 50%;}
+    12%{border-radius: 50% 10% 10% 10%; transform: rotate(45deg);}
+    24%{border-radius: 50% 50% 10% 10%; transform: rotate(90deg);}
+    36%{border-radius: 50% 50% 50% 10%; transform: rotate(135deg);}
+    48%{border-radius: 10% 50% 50% 50%; transform: rotate(180deg);}
+    60%{border-radius: 10% 10% 50% 50%; transform: rotate(225deg);}
+    72%{border-radius: 10% 10% 10% 50%; transform: rotate(270deg);}
+    84%{border-radius: 10% 10% 10% 10%; transform: rotate(315deg);}
+    100%{border-radius: 50% 50% 50% 50%; transform: rotate(360deg);}
+}
+.footer {
+    position: fixed;
+    left: 0;
+    top: 91.5%;
+    background: linear-gradient(to bottom, rgb(255, 255, 255), black);
+    width: 100%;
+    height: 60px;
+    justify-content: center;
+    margin-left: -30px;
+    align-items: center;
+}
+footer:hover {
+    cursor: default;
+}
+.footerLink:hover {
+    border-bottom: 0.5px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+.loadingAnimationBox {
+    padding: 100px 0 150px 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.loadingAnimationText {
+    color: white;
+}
+.loadingAnimation {
+    display: grid;
+    justify-content: center;
+}
+.loadingCircle {
+    margin-top: 20px;
+    background: red;
+    width: 100px;
+    height: 100px;
+    border-radius: 5%;
+    animation: loadingAnimation 0.6s ease-in-out infinite;
+}
+.loadingCircle2 {
+    margin-top: -95px;
+    margin-left: 5px;
+    background-color: rgb(0, 0, 0);
+    width: 90px;
+    height: 90px;
+    border-radius: 5%;
+}
+@keyframes loadingAnimation {
+    0%{background: linear-gradient(to left top, black,black,black, white);}
+    14%{background: linear-gradient(to top, black,black, black,white);}
+    28%{background: linear-gradient(to right top,black, black,black, white);}
+    42%{background: linear-gradient(to right, black,black, black,white);}
+    56%{background: linear-gradient(to right bottom,black, black,black, white);}
+    60%{background: linear-gradient(to bottom, black,black, black,white);}
+    74%{background: linear-gradient(to left bottom,black, black,black, white);}
+    88%{background: linear-gradient(to left, black,black, black,white);}
+    100%{background: linear-gradient(to left top, black,black,black, white);}
+}
+}
+
+
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+
+
+@media screen and (max-width: 800px) {
+    header {
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        background: #000;
+        top: 0;
+        left: 0;
+        width: 100%;
+        font-size: 15px;
+        color: white;
+    }
+    ul {
+        display: flex;
+    }
+    li {
+        list-style-type: none;
+        text-decoration: none;
+        margin-right: 20px;
+        color: white;}
+    li:hover {
+        color: red;
+        transition: 0.2s;
+    }
+    a {
+        text-decoration: none;
+    }
+    .greatings {
+        font-size: 40px;
+        display: grid;
+        justify-content: center;
+        text-align: center;
+        line-height: 60px;
+        cursor: default;
+        padding: 80px 0 0 0;
+    }
+    .H:hover{color:red;transition: 0.2s;}
+    .e:hover{color:red;transition: 0.2s;}
+    .l:hover{color:red;transition: 0.2s;}
+    .l2:hover{color:red;transition: 0.2s;}
+    .o:hover{color:red;transition: 0.2s;}
+    .comma:hover{color:red;transition: 0.2s;}
+    .I:hover{color:red;transition: 0.2s;}
+    .ap:hover{color:red;transition: 0.2s;}
+    .m:hover{color:red;transition: 0.2s;}
+    .C:hover{color:red;transition: 0.2s;}
+    .a:hover{color:red;transition: 0.2s;}
+    .i:hover{color:red;transition: 0.2s;}
+    .o2:hover{color:red;transition: 0.2s;}
+    .comma2:hover{color:red;transition: 0.2s;}
+    .W:hover{color:red;transition: 0.2s;}
+    .e2:hover{color:red;transition: 0.2s;}
+    .b:hover{margin-right:20px;color:red;transition: 0.2s;}
+    .d:hover{color:red;transition: 0.2s;}
+    .e3:hover{color:red;transition: 0.2s;}
+    .s:hover{color:red;transition: 0.2s;}
+    .i:hover{color:red;transition: 0.2s;}
+    .g:hover{color:red;transition: 0.2s;}
+    .n:hover{color:red;transition: 0.2s;}
+    .e4:hover{color:red;transition: 0.2s;}
+    .r:hover{color:red;transition: 0.2s;}
+    .dot:hover{color:red;transition: 0.2s;}
+
+.phrases {
+    display: flex;
+    justify-content: center;
+}
+.section2 {
+    background: white;
+    color: black;
+    font-size: 25px;
+    text-align: center;
+    margin: 40px 0 0 0;
+    padding: 25px 0 25px 0;
+}
+.projects {
+    cursor: default;
+}
+.section3 {
+    margin-top: 20px;
+}
+.slideSquareBox {
+    background: rgba(255, 0, 0, 0);
+    padding: 30px 0 30px 0;
+    display: grid;
+    justify-content: center;
+}
+.text {
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+}
+.text:hover {
+    text-shadow: -10px 5px 2px rgba(255, 0, 0, 0.721);
+    transition: 0.2s;
+}
+.link1, .link2 {
+    color: white;
+    text-decoration: none;
+}
+.animationBox1 {
+    background: #000;
+    width: 1000px;
+    height: 100px;
+    display: grid;
+    justify-content: center;
+}
+.floor {
+    background: linear-gradient(to right, #000,#fff,#fff,#fff,#000);
+    opacity: 0.4;
+    width: 450px;
+    height: 5px;
+    margin-top: -10px;
+    border-radius: 10px;
+}
+.square {
+    width: 35px;
+    height: 35px;
+    margin-top: 32px;
+    margin-left: -40px;
+    border-radius: 12px;
+    border: 7px solid #fff;
+    animation: squareAnimation 6s ease;
+    animation-play-state: running;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+@keyframes squareAnimation {
+    0%{margin-left: -40px;opacity: 0;}
+    10%{margin-left: 0px;transform: rotate(90deg);opacity:0.3;}
+    20%{margin-left: 40px;transform: rotate(180deg);opacity:0.5;}
+    30%{margin-left: 80px;transform: rotate(270deg);opacity:0.5;}
+    40%{margin-left: 120px;transform: rotate(360deg);opacity:0.5;}
+    50%{margin-left: 160px;transform: rotate(450deg);opacity:0.5;}
+    60%{margin-left: 200px;transform: rotate(540deg);opacity:0.5;}
+    70%{margin-left: 240px;transform: rotate(630deg);opacity:0.5;}
+    80%{margin-left: 280px;transform: rotate(720deg);opacity:0.5;}
+    90%{margin-left: 320px;transform: rotate(810deg);opacity:0.3;}
+    100%{margin-left: 360px;transform: rotate(900deg);opacity:0;}
+}
+.borderRadiusBox {
+    padding: 60px 0 0 0;
+}
+.animationBox2 {
+    background: rgba(255, 0, 0, 0);
+    width: 100%;
+    height: 150px;
+    margin-top: -90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.borderAnimation {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 10px solid rgba(255, 255, 255, 0.500);
+    animation-duration: 10s;
+    animation-name: borderAnimation;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    animation-play-state: running;
+    animation-range: initial;
+}
+@keyframes borderAnimation {
+    0%{border-radius: 50% 50% 50% 50%;}
+    12%{border-radius: 50% 10% 10% 10%; transform: rotate(45deg);}
+    24%{border-radius: 50% 50% 10% 10%; transform: rotate(90deg);}
+    36%{border-radius: 50% 50% 50% 10%; transform: rotate(135deg);}
+    48%{border-radius: 10% 50% 50% 50%; transform: rotate(180deg);}
+    60%{border-radius: 10% 10% 50% 50%; transform: rotate(225deg);}
+    72%{border-radius: 10% 10% 10% 50%; transform: rotate(270deg);}
+    84%{border-radius: 10% 10% 10% 10%; transform: rotate(315deg);}
+    100%{border-radius: 50% 50% 50% 50%; transform: rotate(360deg);}
+}
+.footer {
+    position: fixed;
+    left: 0;
+    top: 91.5%;
+    background: linear-gradient(to bottom, rgb(255, 255, 255), black);
+    width: 100%;
+    height: 60px;
+    justify-content: center;
+    margin-left: -30px;
+    align-items: center;
+}
+footer:hover {
+    cursor: default;
+}
+.footerLink:hover {
+    border-bottom: 0.5px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+.loadingAnimationBox {
+    padding: 100px 0 150px 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.loadingAnimationText {
+    color: white;
+}
+.loadingAnimation {
+    display: grid;
+    justify-content: center;
+}
+.loadingCircle {
+    margin-top: 20px;
+    background: red;
+    width: 100px;
+    height: 100px;
+    border-radius: 5%;
+    animation: loadingAnimation 0.6s ease-in-out infinite;
+}
+.loadingCircle2 {
+    margin-top: -95px;
+    margin-left: 5px;
+    background-color: rgb(0, 0, 0);
+    width: 90px;
+    height: 90px;
+    border-radius: 5%;
+}
+@keyframes loadingAnimation {
+    0%{background: linear-gradient(to left top, black,black,black, white);}
+    14%{background: linear-gradient(to top, black,black, black,white);}
+    28%{background: linear-gradient(to right top,black, black,black, white);}
+    42%{background: linear-gradient(to right, black,black, black,white);}
+    56%{background: linear-gradient(to right bottom,black, black,black, white);}
+    60%{background: linear-gradient(to bottom, black,black, black,white);}
+    74%{background: linear-gradient(to left bottom,black, black,black, white);}
+    88%{background: linear-gradient(to left, black,black, black,white);}
+    100%{background: linear-gradient(to left top, black,black,black, white);}
 }
 }
